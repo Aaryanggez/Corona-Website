@@ -80,14 +80,42 @@ ul li a:hover {
 }
 
 /* second block of text (container, H1, P) */
+.flex2 {
 
+  display: flex;
+  color: white;
+  padding: 100px 150px 150px 100px;
+  position: center;
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+}
+
+.flex2 h1 {
+  font-size: 325%;
+  text-align: center;
+}
+.flex2 p {
+  font-weight: 400%;
+  font-family: sans-serif;
+  font-size: 150%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
 
 /* third block of text 
 (container to arrange child items vertically - flex-direction: row)
 
 */
-.flex3 {
-  font-size:200%;
-  text-align:center;
-  color: aliceblue;
+.flex {
+  display: flex;
+  color: white;
+  padding-left: 3%;
+  padding-right: 3%;
+  position: center;
+}
+
+.flex--vertical {
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 3%;
+  padding-right: 3%;
 }
