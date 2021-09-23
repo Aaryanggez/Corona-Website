@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Corona Testing</title>
+  <!-- link stylesheet file -->
+  <link rel="stylesheet" href="./stylesheets/formStyle.css">
+</head>
+
+<body>
+  <!-- Navigation Bar with menu items -->
+  <div id="navbar">
+    <div class="container">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
+        <li><a href="coronatesting.html">Corona Testing</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Heading on top of the form -->
+  <div class="regform">
+    <h1>Information Form</h1>
+  </div>
+
+  <!-- Main form -->
+  <div class="main">
+    <form id="testForm">
+      <!-- input elements of the form -->
+      <div id="name">
+        <h2 class="name">Name</h2>
+        <input id="firstname" type="text" required name="first_name"><br>
+        <label id="firstlabel"> first name</label>
+        <!-- add input and label for last name -->
+        <input id="lastname" type="text" required name="last_name"><br>
+        <label id="lastlabel"> last name</label>
+
+      </div>
+      <h2 class="name">E-mail</h2>
+      <input id="email" type="email" required name="E-mail"><br>
+      <!-- add more form elements here -->
+      <h2 class="name">Phone No.</h2>
+      <input id="mobile" type="text"pattern="[789][0-9]{9}" required name="Mobile"><br>
+      <h2 class="name">Profession</h2>
+      <input id="profession" type="text" required name="job"placeholder="student/employee/buisnessman" ><br>
+      <h2 class="name">Date Of Birth</h2>
+      <input id="dateofbirth" type="date" required name="date"><br>
+      <h2 class="name">State</h2><select name="state" id="state"><option>Delhi</option><option>Himachal</option>
+        <option>Kolkata</option><option>Nagaland</option><option>Uttar Pradesh</option><option>Kerala</option>
+        <option>Maharashtra</option><option>Tamil Nadu</option><option>West Bengal</option><option>Bihar</option>
+        <option>Odhisa</option><option>Punjab</option><option>Andra Pradesh</option><option>Telengana</option>
+        <option>Rajhastan</option><option>Gujrat</option></select>
+        <h2 id="travel">Travel History</h2>
+        <div id="travel">
+         <input id="travel" type="radio"value="yes" required name="travel">yes
+       <input id="travel" type="radio"value="no" required name="travel">no<br>
+</div>
+<h2 id="symptoms">Covid Symptoms</h2>
+<div class="arrange">
+      <input id="symptoms" type="checkbox"value="cold" required name="symptoms">cold
+      <input id="symptoms" type="checkbox"value="fever" required name="symptoms">fever
+      <input id="symptoms" type="checkbox"value="dry-cough" required name="symptoms">dry-cough
+      <input id="symptoms" type="checkbox"value="tiredness" required name="symptoms">tiredness
+      <input id="symptoms" type="checkbox"value="chest pain" required name="symptoms">chest pain
+      <input id="symptoms" type="checkbox"value="difficulty breathing" required name="symptoms">difficulty breathing<br>
+      </div>
+      <input id="submit" type="submit">
+      <h1 id="cen"></h1>
+    </form>
+  </div>
+
+  <!-- add script files -->
+  <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase.js"></script>
+  <!-- add script files -->
+  <script src="scripts/form.js"></script>
+
+</body>
+
+</html>

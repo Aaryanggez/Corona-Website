@@ -18,20 +18,18 @@
    whether its margin area is falling inside document's visible width and height.
    The condition is checked through another function call and in case it retuns true,
    list item is made visible, by adding style class "in-view" */
-  function anime(){
-    for(i=0;i<items.length;i++){
-      if(isElementInViewport(items[i])){
-        items[i].classList.add("show")
-        
-      }else{items[i].classList.remove("show")}
+  function callbackFunc() {
+    for (var i = 0; i < items.length; i++) {
+      if (isElementInViewport(items[i])) {
+        items[i].classList.add("in-view");
+      }else {
+        items[i].classList.remove("in-view");
+      }
     }
   }
 
-   window.addEventListener("scroll",anime)
-
   /* check for scroll event on document
   and call specified function */
-  
-
+  window.addEventListener("scroll", callbackFunc);
 
 })();

@@ -84,44 +84,39 @@ h1 {
 }
   /* all odd numbered list items(1,3,5,7,9) to be placed
   with 45px margin to the left of line in the center*/
-.timeline ul li:nth-child(odd)
-div{left: 45px;
-transform: translate(200px,0);
+.timeline ul li:nth-child(odd) div {
+  left: 45px;
+  transform: translate3d(200px, 0, 0);
 }
-
-
   /* all even numbered list items(2,4,6,8) to be placed
   with -439px margin to the left of line in the center*/
-  .timeline ul li:nth-child(even)
-  div{left: -450px;
-  transform: translate(-200px,0);
-  }
-
-
+.timeline ul li:nth-child(even) div {
+  left: -439px;
+  transform: translate3d(-200px, 0, 0);
+}
 
 /* hide the content of each list item (li, div)
 before scroll event and till it matches window width and height */
-.timeline ul li div{
+.timeline ul li div
+{
   visibility: hidden;
   opacity: 0;
-  transition:all .54s;
+  transition: all .5s ease-in-out;
 }
-
-
-
 /* show the content of each list item (li, div) in document view
 once it matches window width and height through scroll event */
-.timeline ul li.show div{
-transform: none;
-visibility: visible;
-opacity: 1;
+.timeline ul li.in-view div
+{
+  transform: none;
+  visibility: visible;
+  opacity: 1;
 }
 
-
-
-
 /* styling for the time tag for creating event heading */
-.timeline time{
+time
+{
   display: block;
-  font-size: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
 }
